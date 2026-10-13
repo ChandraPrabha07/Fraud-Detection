@@ -1,0 +1,254 @@
+{
+  "nodes": [
+    "LocationMatch",
+    "DeviceKnown",
+    "LargeTransaction",
+    "UnusualTime",
+    "Fraud"
+  ],
+  "edges": [
+    {
+      "source": "LocationMatch",
+      "target": "Fraud"
+    },
+    {
+      "source": "DeviceKnown",
+      "target": "Fraud"
+    },
+    {
+      "source": "LargeTransaction",
+      "target": "Fraud"
+    },
+    {
+      "source": "UnusualTime",
+      "target": "Fraud"
+    }
+  ],
+  "training_samples": 15000,
+  "prior_fraud_probability": 0.04841832423157927,
+  "marginals": {
+    "LocationMatch": 0.8502666666666666,
+    "DeviceKnown": 0.7978,
+    "LargeTransaction": 0.149,
+    "UnusualTime": 0.192
+  },
+  "evaluation": {
+    "roc_auc": 0.8660976535464714,
+    "test_samples": 5000,
+    "observed_fraud_rate": 0.047
+  },
+  "conditional_table": [
+    {
+      "LocationMatch": 1,
+      "DeviceKnown": 1,
+      "LargeTransaction": 0,
+      "UnusualTime": 0,
+      "fraud_probability": 0.007806183863027973,
+      "risk_level": "LOW",
+      "support": 6957
+    },
+    {
+      "LocationMatch": 1,
+      "DeviceKnown": 1,
+      "LargeTransaction": 0,
+      "UnusualTime": 1,
+      "fraud_probability": 0.0182317119013608,
+      "risk_level": "LOW",
+      "support": 1662
+    },
+    {
+      "LocationMatch": 1,
+      "DeviceKnown": 1,
+      "LargeTransaction": 1,
+      "UnusualTime": 0,
+      "fraud_probability": 0.032651614862812595,
+      "risk_level": "LOW",
+      "support": 1234
+    },
+    {
+      "LocationMatch": 0,
+      "DeviceKnown": 1,
+      "LargeTransaction": 0,
+      "UnusualTime": 0,
+      "fraud_probability": 0.04407592212112318,
+      "risk_level": "LOW",
+      "support": 1277
+    },
+    {
+      "LocationMatch": 1,
+      "DeviceKnown": 0,
+      "LargeTransaction": 0,
+      "UnusualTime": 0,
+      "fraud_probability": 0.04530710105070164,
+      "risk_level": "LOW",
+      "support": 1772
+    },
+    {
+      "LocationMatch": 1,
+      "DeviceKnown": 1,
+      "LargeTransaction": 1,
+      "UnusualTime": 1,
+      "fraud_probability": 0.07161745262230057,
+      "risk_level": "LOW",
+      "support": 283
+    },
+    {
+      "LocationMatch": 1,
+      "DeviceKnown": 0,
+      "LargeTransaction": 0,
+      "UnusualTime": 1,
+      "fraud_probability": 0.1072122052704577,
+      "risk_level": "MEDIUM",
+      "support": 450
+    },
+    {
+      "LocationMatch": 0,
+      "DeviceKnown": 1,
+      "LargeTransaction": 0,
+      "UnusualTime": 1,
+      "fraud_probability": 0.1292767431788653,
+      "risk_level": "MEDIUM",
+      "support": 288
+    },
+    {
+      "LocationMatch": 1,
+      "DeviceKnown": 0,
+      "LargeTransaction": 1,
+      "UnusualTime": 0,
+      "fraud_probability": 0.17563352826510722,
+      "risk_level": "MEDIUM",
+      "support": 320
+    },
+    {
+      "LocationMatch": 0,
+      "DeviceKnown": 1,
+      "LargeTransaction": 1,
+      "UnusualTime": 0,
+      "fraud_probability": 0.19248689574839836,
+      "risk_level": "MEDIUM",
+      "support": 214
+    },
+    {
+      "LocationMatch": 1,
+      "DeviceKnown": 0,
+      "LargeTransaction": 1,
+      "UnusualTime": 1,
+      "fraud_probability": 0.3172920065252855,
+      "risk_level": "HIGH",
+      "support": 76
+    },
+    {
+      "LocationMatch": 0,
+      "DeviceKnown": 1,
+      "LargeTransaction": 1,
+      "UnusualTime": 1,
+      "fraud_probability": 0.3479809976247031,
+      "risk_level": "HIGH",
+      "support": 52
+    },
+    {
+      "LocationMatch": 0,
+      "DeviceKnown": 0,
+      "LargeTransaction": 0,
+      "UnusualTime": 0,
+      "fraud_probability": 0.38200589970501475,
+      "risk_level": "HIGH",
+      "support": 296
+    },
+    {
+      "LocationMatch": 0,
+      "DeviceKnown": 0,
+      "LargeTransaction": 0,
+      "UnusualTime": 1,
+      "fraud_probability": 0.6178781925343811,
+      "risk_level": "CRITICAL",
+      "support": 63
+    },
+    {
+      "LocationMatch": 0,
+      "DeviceKnown": 0,
+      "LargeTransaction": 1,
+      "UnusualTime": 0,
+      "fraud_probability": 0.8555555555555555,
+      "risk_level": "CRITICAL",
+      "support": 50
+    },
+    {
+      "LocationMatch": 0,
+      "DeviceKnown": 0,
+      "LargeTransaction": 1,
+      "UnusualTime": 1,
+      "fraud_probability": 0.9528301886792453,
+      "risk_level": "CRITICAL",
+      "support": 6
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Typical purchase",
+      "evidence": {
+        "LocationMatch": 1,
+        "DeviceKnown": 1,
+        "LargeTransaction": 0,
+        "UnusualTime": 0
+      },
+      "fraud_probability": 0.007806183863027973,
+      "risk_level": "LOW"
+    },
+    {
+      "name": "Large purchase at home",
+      "evidence": {
+        "LocationMatch": 1,
+        "DeviceKnown": 1,
+        "LargeTransaction": 1,
+        "UnusualTime": 0
+      },
+      "fraud_probability": 0.032651614862812595,
+      "risk_level": "LOW"
+    },
+    {
+      "name": "Travelling customer",
+      "evidence": {
+        "LocationMatch": 0,
+        "DeviceKnown": 1,
+        "LargeTransaction": 0,
+        "UnusualTime": 0
+      },
+      "fraud_probability": 0.04407592212112318,
+      "risk_level": "LOW"
+    },
+    {
+      "name": "New phone, night-time",
+      "evidence": {
+        "LocationMatch": 1,
+        "DeviceKnown": 0,
+        "LargeTransaction": 0,
+        "UnusualTime": 1
+      },
+      "fraud_probability": 0.1072122052704577,
+      "risk_level": "MEDIUM"
+    },
+    {
+      "name": "Unknown device + foreign location",
+      "evidence": {
+        "LocationMatch": 0,
+        "DeviceKnown": 0,
+        "LargeTransaction": 0,
+        "UnusualTime": 0
+      },
+      "fraud_probability": 0.38200589970501475,
+      "risk_level": "HIGH"
+    },
+    {
+      "name": "All risk signals",
+      "evidence": {
+        "LocationMatch": 0,
+        "DeviceKnown": 0,
+        "LargeTransaction": 1,
+        "UnusualTime": 1
+      },
+      "fraud_probability": 0.9528301886792453,
+      "risk_level": "CRITICAL"
+    }
+  ]
+}

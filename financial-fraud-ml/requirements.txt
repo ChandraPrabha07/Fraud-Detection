@@ -1,0 +1,4 @@
+# Training pipeline (python main.py ...) + backend API.
+# Model libraries are pinned in backend/requirements.txt so training and serving match.
+-r backend/requirements.txt
+kagglehub>=0.3

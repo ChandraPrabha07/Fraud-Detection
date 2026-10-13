@@ -1,0 +1,238 @@
+{
+  "searches": [
+    {
+      "model": "Logistic Regression",
+      "search_type": "GridSearchCV",
+      "cv": "StratifiedKFold(n_splits=5)",
+      "scoring": "average_precision",
+      "best_params": {
+        "C": 10.0,
+        "penalty": "l2"
+      },
+      "best_score": 0.9850903227722785,
+      "n_candidates": 10,
+      "search_time_sec": 58.155,
+      "top_candidates": [
+        {
+          "rank": 1,
+          "params": {
+            "C": 10.0,
+            "penalty": "l2"
+          },
+          "mean_score": 0.9850903227722785,
+          "std_score": 0.0010464633060781464
+        },
+        {
+          "rank": 2,
+          "params": {
+            "C": 10.0,
+            "penalty": "l1"
+          },
+          "mean_score": 0.9850891566536933,
+          "std_score": 0.0010466469359682112
+        },
+        {
+          "rank": 3,
+          "params": {
+            "C": 1.0,
+            "penalty": "l2"
+          },
+          "mean_score": 0.9850720404251023,
+          "std_score": 0.0010423543602847642
+        },
+        {
+          "rank": 4,
+          "params": {
+            "C": 1.0,
+            "penalty": "l1"
+          },
+          "mean_score": 0.9850593229038178,
+          "std_score": 0.001041190535608443
+        },
+        {
+          "rank": 5,
+          "params": {
+            "C": 0.1,
+            "penalty": "l2"
+          },
+          "mean_score": 0.9848929970246566,
+          "std_score": 0.0010051700949306845
+        }
+      ]
+    },
+    {
+      "model": "SVM (Linear kernel)",
+      "search_type": "GridSearchCV",
+      "cv": "StratifiedKFold(n_splits=3)",
+      "scoring": "average_precision",
+      "best_params": {
+        "C": 1.0
+      },
+      "best_score": 0.9851570534698818,
+      "n_candidates": 3,
+      "search_time_sec": 0.833,
+      "top_candidates": [
+        {
+          "rank": 1,
+          "params": {
+            "C": 1.0
+          },
+          "mean_score": 0.9851570534698818,
+          "std_score": 0.0005899670795575748
+        },
+        {
+          "rank": 2,
+          "params": {
+            "C": 0.1
+          },
+          "mean_score": 0.9851531652227669,
+          "std_score": 0.0005890783880135774
+        },
+        {
+          "rank": 3,
+          "params": {
+            "C": 0.01
+          },
+          "mean_score": 0.9851063756978252,
+          "std_score": 0.0005754500598138181
+        }
+      ]
+    },
+    {
+      "model": "SVM (RBF kernel)",
+      "search_type": "GridSearchCV",
+      "cv": "StratifiedKFold(n_splits=3) on 4000 samples",
+      "scoring": "average_precision",
+      "best_params": {
+        "C": 10.0,
+        "gamma": "scale"
+      },
+      "best_score": 0.9892587058723469,
+      "n_candidates": 4,
+      "search_time_sec": 0.424,
+      "top_candidates": [
+        {
+          "rank": 1,
+          "params": {
+            "C": 10.0,
+            "gamma": "scale"
+          },
+          "mean_score": 0.9892587058723469,
+          "std_score": 0.002486688893793698
+        },
+        {
+          "rank": 2,
+          "params": {
+            "C": 10.0,
+            "gamma": 0.01
+          },
+          "mean_score": 0.9879594267858293,
+          "std_score": 0.005316908907089526
+        },
+        {
+          "rank": 3,
+          "params": {
+            "C": 1.0,
+            "gamma": 0.01
+          },
+          "mean_score": 0.9857929135378226,
+          "std_score": 0.00251566994857756
+        },
+        {
+          "rank": 4,
+          "params": {
+            "C": 1.0,
+            "gamma": "scale"
+          },
+          "mean_score": 0.9845883010195858,
+          "std_score": 0.0029171980532432915
+        }
+      ],
+      "training_samples": 8000
+    },
+    {
+      "model": "XGBoost",
+      "search_type": "RandomizedSearchCV",
+      "cv": "StratifiedKFold(n_splits=3)",
+      "scoring": "average_precision",
+      "best_params": {
+        "subsample": 1.0,
+        "n_estimators": 300,
+        "min_child_weight": 5,
+        "max_depth": 8,
+        "learning_rate": 0.2,
+        "colsample_bytree": 0.8
+      },
+      "best_score": 0.9999321247764926,
+      "n_candidates": 12,
+      "search_time_sec": 20.25,
+      "top_candidates": [
+        {
+          "rank": 1,
+          "params": {
+            "subsample": 1.0,
+            "n_estimators": 300,
+            "min_child_weight": 5,
+            "max_depth": 8,
+            "learning_rate": 0.2,
+            "colsample_bytree": 0.8
+          },
+          "mean_score": 0.9999321247764926,
+          "std_score": 7.266538878639339e-05
+        },
+        {
+          "rank": 2,
+          "params": {
+            "subsample": 0.7,
+            "n_estimators": 400,
+            "min_child_weight": 1,
+            "max_depth": 3,
+            "learning_rate": 0.2,
+            "colsample_bytree": 0.6
+          },
+          "mean_score": 0.9999314594142902,
+          "std_score": 8.007134961473239e-05
+        },
+        {
+          "rank": 3,
+          "params": {
+            "subsample": 0.85,
+            "n_estimators": 400,
+            "min_child_weight": 5,
+            "max_depth": 8,
+            "learning_rate": 0.2,
+            "colsample_bytree": 1.0
+          },
+          "mean_score": 0.9999240259165498,
+          "std_score": 7.84412534296438e-05
+        },
+        {
+          "rank": 4,
+          "params": {
+            "subsample": 1.0,
+            "n_estimators": 300,
+            "min_child_weight": 5,
+            "max_depth": 4,
+            "learning_rate": 0.2,
+            "colsample_bytree": 1.0
+          },
+          "mean_score": 0.9999126465148365,
+          "std_score": 9.19809104019861e-05
+        },
+        {
+          "rank": 5,
+          "params": {
+            "subsample": 0.7,
+            "n_estimators": 400,
+            "min_child_weight": 1,
+            "max_depth": 8,
+            "learning_rate": 0.03,
+            "colsample_bytree": 0.6
+          },
+          "mean_score": 0.9999113232037721,
+          "std_score": 4.765828682635359e-05
+        }
+      ]
+    }
+  ]
+}

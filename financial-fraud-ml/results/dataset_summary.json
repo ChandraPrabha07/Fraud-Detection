@@ -1,0 +1,218 @@
+{
+  "raw_rows": 284807,
+  "rows_after_cleaning": 283726,
+  "duplicates_removed": 1081,
+  "total_transactions": 283726,
+  "fraud_cases": 473,
+  "legitimate_cases": 283253,
+  "fraud_rate": 0.001667101358352777,
+  "amount_stats": {
+    "fraud_mean": 123.87186046511628,
+    "fraud_median": 9.82,
+    "legitimate_mean": 88.41357475472458,
+    "legitimate_median": 22.0,
+    "total_fraud_amount": 58591.39
+  },
+  "hourly_distribution": [
+    {
+      "hour": 0,
+      "legitimate": 7641,
+      "fraud": 6,
+      "fraud_rate": 0.0007846214201647705
+    },
+    {
+      "hour": 1,
+      "legitimate": 4198,
+      "fraud": 10,
+      "fraud_rate": 0.002376425855513308
+    },
+    {
+      "hour": 2,
+      "legitimate": 3260,
+      "fraud": 48,
+      "fraud_rate": 0.014510278113663845
+    },
+    {
+      "hour": 3,
+      "legitimate": 3470,
+      "fraud": 17,
+      "fraud_rate": 0.004875250932033267
+    },
+    {
+      "hour": 4,
+      "legitimate": 2181,
+      "fraud": 23,
+      "fraud_rate": 0.010435571687840291
+    },
+    {
+      "hour": 5,
+      "legitimate": 2977,
+      "fraud": 11,
+      "fraud_rate": 0.003681392235609103
+    },
+    {
+      "hour": 6,
+      "legitimate": 4073,
+      "fraud": 9,
+      "fraud_rate": 0.002204801567858893
+    },
+    {
+      "hour": 7,
+      "legitimate": 7210,
+      "fraud": 23,
+      "fraud_rate": 0.0031798700400940136
+    },
+    {
+      "hour": 8,
+      "legitimate": 10223,
+      "fraud": 9,
+      "fraud_rate": 0.0008795934323690383
+    },
+    {
+      "hour": 9,
+      "legitimate": 15751,
+      "fraud": 16,
+      "fraud_rate": 0.0010147777002600367
+    },
+    {
+      "hour": 10,
+      "legitimate": 16540,
+      "fraud": 8,
+      "fraud_rate": 0.00048344210780759005
+    },
+    {
+      "hour": 11,
+      "legitimate": 16728,
+      "fraud": 53,
+      "fraud_rate": 0.003158333829926703
+    },
+    {
+      "hour": 12,
+      "legitimate": 15361,
+      "fraud": 17,
+      "fraud_rate": 0.001105475354402393
+    },
+    {
+      "hour": 13,
+      "legitimate": 15306,
+      "fraud": 17,
+      "fraud_rate": 0.001109443320498597
+    },
+    {
+      "hour": 14,
+      "legitimate": 16497,
+      "fraud": 23,
+      "fraud_rate": 0.0013922518159806296
+    },
+    {
+      "hour": 15,
+      "legitimate": 16348,
+      "fraud": 26,
+      "fraud_rate": 0.001587883229510199
+    },
+    {
+      "hour": 16,
+      "legitimate": 16374,
+      "fraud": 22,
+      "fraud_rate": 0.001341790680653818
+    },
+    {
+      "hour": 17,
+      "legitimate": 16102,
+      "fraud": 28,
+      "fraud_rate": 0.001735895846249225
+    },
+    {
+      "hour": 18,
+      "legitimate": 16931,
+      "fraud": 28,
+      "fraud_rate": 0.001651040745326965
+    },
+    {
+      "hour": 19,
+      "legitimate": 15547,
+      "fraud": 19,
+      "fraud_rate": 0.0012206090196582296
+    },
+    {
+      "hour": 20,
+      "legitimate": 16687,
+      "fraud": 18,
+      "fraud_rate": 0.0010775217000897936
+    },
+    {
+      "hour": 21,
+      "legitimate": 17613,
+      "fraud": 16,
+      "fraud_rate": 0.0009075954393329173
+    },
+    {
+      "hour": 22,
+      "legitimate": 15369,
+      "fraud": 9,
+      "fraud_rate": 0.0005852516582130316
+    },
+    {
+      "hour": 23,
+      "legitimate": 10866,
+      "fraud": 17,
+      "fraud_rate": 0.0015620692823669945
+    }
+  ],
+  "amount_distribution": [
+    {
+      "bucket": "<1",
+      "legitimate": 16699,
+      "fraud": 66,
+      "fraud_rate": 0.00393677303906949
+    },
+    {
+      "bucket": "1-10",
+      "legitimate": 79936,
+      "fraud": 172,
+      "fraud_rate": 0.0021471014130923253
+    },
+    {
+      "bucket": "10-50",
+      "legitimate": 91883,
+      "fraud": 54,
+      "fraud_rate": 0.0005873587347857772
+    },
+    {
+      "bucket": "50-100",
+      "legitimate": 37584,
+      "fraud": 56,
+      "fraud_rate": 0.001487778958554729
+    },
+    {
+      "bucket": "100-250",
+      "legitimate": 34383,
+      "fraud": 54,
+      "fraud_rate": 0.0015680808432790314
+    },
+    {
+      "bucket": "250-500",
+      "legitimate": 13343,
+      "fraud": 37,
+      "fraud_rate": 0.002765321375186846
+    },
+    {
+      "bucket": "500-1k",
+      "legitimate": 6370,
+      "fraud": 25,
+      "fraud_rate": 0.003909304143862392
+    },
+    {
+      "bucket": "1k-5k",
+      "legitimate": 3000,
+      "fraud": 9,
+      "fraud_rate": 0.0029910269192422734
+    },
+    {
+      "bucket": "5k+",
+      "legitimate": 55,
+      "fraud": 0,
+      "fraud_rate": 0.0
+    }
+  ]
+}

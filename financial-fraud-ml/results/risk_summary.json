@@ -1,0 +1,93 @@
+{
+  "model": "Random Forest",
+  "evaluated_transactions": 56746,
+  "tiers": [
+    {
+      "tier": "Low",
+      "transactions": 56536,
+      "actual_fraud": 16
+    },
+    {
+      "tier": "Medium",
+      "transactions": 120,
+      "actual_fraud": 5
+    },
+    {
+      "tier": "High",
+      "transactions": 90,
+      "actual_fraud": 74
+    }
+  ],
+  "top_flagged": [
+    {
+      "transaction_id": 79578,
+      "amount": 270.0,
+      "hour": 16,
+      "fraud_probability": 1.0,
+      "actual": "FRAUD"
+    },
+    {
+      "transaction_id": 150420,
+      "amount": 1.0,
+      "hour": 2,
+      "fraud_probability": 1.0,
+      "actual": "FRAUD"
+    },
+    {
+      "transaction_id": 43498,
+      "amount": 53.95,
+      "hour": 11,
+      "fraud_probability": 1.0,
+      "actual": "FRAUD"
+    },
+    {
+      "transaction_id": 119616,
+      "amount": 109.9,
+      "hour": 21,
+      "fraud_probability": 1.0,
+      "actual": "LEGITIMATE"
+    },
+    {
+      "transaction_id": 222791,
+      "amount": 1.0,
+      "hour": 15,
+      "fraud_probability": 1.0,
+      "actual": "FRAUD"
+    },
+    {
+      "transaction_id": 150078,
+      "amount": 0.01,
+      "hour": 2,
+      "fraud_probability": 1.0,
+      "actual": "FRAUD"
+    },
+    {
+      "transaction_id": 124863,
+      "amount": 106.9,
+      "hour": 21,
+      "fraud_probability": 1.0,
+      "actual": "FRAUD"
+    },
+    {
+      "transaction_id": 17537,
+      "amount": 89.99,
+      "hour": 8,
+      "fraud_probability": 1.0,
+      "actual": "LEGITIMATE"
+    },
+    {
+      "transaction_id": 154122,
+      "amount": 0.0,
+      "hour": 4,
+      "fraud_probability": 1.0,
+      "actual": "FRAUD"
+    },
+    {
+      "transaction_id": 6695,
+      "amount": 1.0,
+      "hour": 2,
+      "fraud_probability": 1.0,
+      "actual": "FRAUD"
+    }
+  ]
+}

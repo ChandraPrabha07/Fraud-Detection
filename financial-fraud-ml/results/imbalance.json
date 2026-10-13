@@ -1,0 +1,26 @@
+{
+  "stages": [
+    {
+      "stage": "Original training set",
+      "legitimate": 226602,
+      "fraud": 378
+    },
+    {
+      "stage": "After random undersampling",
+      "legitimate": 30000,
+      "fraud": 378
+    },
+    {
+      "stage": "After SMOTE",
+      "legitimate": 30000,
+      "fraud": 15000
+    }
+  ],
+  "test_distribution": {
+    "legitimate": 56651,
+    "fraud": 95
+  },
+  "smote_ratio": 0.5,
+  "majority_cap": 30000,
+  "note": "Resampling is applied after the train/test split and only to training data."
+}

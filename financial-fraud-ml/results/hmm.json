@@ -1,0 +1,91 @@
+{
+  "states": [
+    "SAFE",
+    "SUSPICIOUS",
+    "COMPROMISED"
+  ],
+  "observations": [
+    "Normal Login",
+    "Small Purchase",
+    "Large Purchase",
+    "New Device",
+    "New Location",
+    "Failed Login"
+  ],
+  "estimation": "supervised MLE",
+  "training_sequences": 675,
+  "test_sequences": 225,
+  "start_probabilities": {
+    "SAFE": 0.9970501474926253,
+    "SUSPICIOUS": 0.0014749262536873156,
+    "COMPROMISED": 0.0014749262536873156
+  },
+  "transition_matrix": [
+    {
+      "from": "SAFE",
+      "SAFE": 0.9206602399611623,
+      "SUSPICIOUS": 0.07927040710174076,
+      "COMPROMISED": 6.935293709688605e-05
+    },
+    {
+      "from": "SUSPICIOUS",
+      "SAFE": 0.33100504462553354,
+      "SUSPICIOUS": 0.5898331393092744,
+      "COMPROMISED": 0.07916181606519208
+    },
+    {
+      "from": "COMPROMISED",
+      "SAFE": 0.000429553264604811,
+      "SUSPICIOUS": 0.000429553264604811,
+      "COMPROMISED": 0.9991408934707904
+    }
+  ],
+  "emission_matrix": [
+    {
+      "state": "SAFE",
+      "Normal Login": 0.39501587087188494,
+      "Small Purchase": 0.4191260890119538,
+      "Large Purchase": 0.08043492942527183,
+      "New Device": 0.03275477814547174,
+      "New Location": 0.04065644627541028,
+      "Failed Login": 0.03201188627000743
+    },
+    {
+      "state": "SUSPICIOUS",
+      "Normal Login": 0.15785526809148856,
+      "Small Purchase": 0.16310461192350956,
+      "Large Purchase": 0.09711286089238845,
+      "New Device": 0.20022497187851518,
+      "New Location": 0.19985001874765654,
+      "Failed Login": 0.1818522684664417
+    },
+    {
+      "state": "COMPROMISED",
+      "Normal Login": 0.0489344909234412,
+      "Small Purchase": 0.10063141278610892,
+      "Large Purchase": 0.4064719810576164,
+      "New Device": 0.15390686661404893,
+      "New Location": 0.15272296764009471,
+      "Failed Login": 0.13733228097868982
+    }
+  ],
+  "evaluation": {
+    "state_accuracy": 0.87995337995338,
+    "per_state_recall": {
+      "SAFE": 0.9767767767767768,
+      "SUSPICIOUS": 0.29559748427672955,
+      "COMPROMISED": 0.9606557377049181
+    },
+    "takeover_detection": {
+      "precision": 0.9305555555555556,
+      "recall": 0.9852941176470589,
+      "f1": 0.9571428571428572,
+      "accounts": 225,
+      "true_takeovers": 68
+    }
+  },
+  "comparison": {
+    "supervised": 0.87995337995338,
+    "baum_welch": 0.8773310023310024
+  }
+}

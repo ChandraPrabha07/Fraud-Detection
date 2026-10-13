@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+.env.local
+frontend/.env.local
+
+# Raw/processed data are re-created with `python main.py download` / `train`.
+# Trained models/*.joblib ARE committed (via Git LFS) because the deployed image needs them.
+data/raw/*.csv
+data/processed/*
+!data/processed/.gitkeep
+
+# Frontend
+frontend/node_modules/
+frontend/dist/

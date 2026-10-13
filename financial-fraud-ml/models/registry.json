@@ -1,0 +1,101 @@
+{
+  "feature_columns": [
+    "Time",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "Amount"
+  ],
+  "decision_threshold": 0.5,
+  "models": [
+    {
+      "key": "logistic_regression",
+      "name": "Logistic Regression",
+      "family": "Linear",
+      "file": "logistic_regression.joblib",
+      "task": "classification",
+      "description": ""
+    },
+    {
+      "key": "svm_linear",
+      "name": "SVM (Linear)",
+      "family": "SVM",
+      "file": "svm_linear.joblib",
+      "task": "classification",
+      "description": ""
+    },
+    {
+      "key": "svm_rbf",
+      "name": "SVM (RBF)",
+      "family": "SVM",
+      "file": "svm_rbf.joblib",
+      "task": "classification",
+      "description": ""
+    },
+    {
+      "key": "random_forest",
+      "name": "Random Forest",
+      "family": "Bagging",
+      "file": "random_forest.joblib",
+      "task": "classification",
+      "description": ""
+    },
+    {
+      "key": "bagging",
+      "name": "Bagged Trees",
+      "family": "Bagging",
+      "file": "bagging.joblib",
+      "task": "classification",
+      "description": ""
+    },
+    {
+      "key": "xgboost",
+      "name": "XGBoost",
+      "family": "Boosting",
+      "file": "xgboost.joblib",
+      "task": "classification",
+      "description": ""
+    },
+    {
+      "key": "stacking",
+      "name": "Stacking Ensemble",
+      "family": "Stacking",
+      "file": "stacking.joblib",
+      "task": "classification",
+      "description": ""
+    },
+    {
+      "key": "svr_amount",
+      "name": "SVR Amount Predictor",
+      "family": "SVM",
+      "file": "svr_amount.joblib",
+      "task": "regression",
+      "description": "Predicts transaction Amount (not financial loss)"
+    }
+  ]
+}

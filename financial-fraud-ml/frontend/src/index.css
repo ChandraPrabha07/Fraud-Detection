@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #0d0d0d;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .input-field {
+    @apply w-full rounded-md border border-line-strong bg-page px-2.5 py-1.5 text-sm text-ink outline-none transition focus:border-accent focus:ring-1 focus:ring-accent;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-[#2a78d6];
+  }
+  .btn-ghost {
+    @apply btn border border-line-strong text-ink-secondary hover:bg-surface-hover hover:text-ink;
+  }
+}
+
+/* Recharts focus outline is noisy on click */
+.recharts-wrapper *:focus {
+  outline: none;
+}

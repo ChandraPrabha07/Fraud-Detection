@@ -1,0 +1,14 @@
+# Not needed at runtime (models are pre-trained)
+data/raw
+data/processed
+notebooks
+reports
+**/__pycache__
+.venv
+.git
+# Rebuilt inside the image
+frontend/node_modules
+frontend/dist
+# Local secrets never go into images
+**/.env
+**/.env.local

@@ -1,0 +1,20 @@
+# Run after `python main.py train` so models/ and results/ exist.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      CORS_ORIGINS: http://localhost:8080
+    ports:
+      - "8000:8000"
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: http://localhost:8000/api
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
